@@ -98,10 +98,11 @@ section { padding: 80px 10%; }
     border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Projects Grid */
+/* Projects Grid - FIXED ALIGNMENT HERE */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Changed 'auto-fit' to 'auto-fill' to stop the last card from stretching */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 }
 
