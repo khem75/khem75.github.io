@@ -1,4 +1,4 @@
-/* General Reset */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -6,117 +6,178 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* VARIABLES */
 :root {
-    --bg-color: #0f172a;       /* Dark Blue/Slate background */
-    --card-bg: #1e293b;        /* Slightly lighter for cards */
-    --text-primary: #f8fafc;   /* White text */
-    --text-secondary: #94a3b8; /* Grey text */
-    --accent: #38bdf8;         /* Light Blue accent */
-    --hover: #0ea5e9;          /* Darker Blue on hover */
+    --bg-color: #020617;
+    --card-bg: #0f172a;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #38bdf8;
+    --hover: #0ea5e9;
 }
 
+/* GLOBAL */
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     line-height: 1.6;
 }
 
-a { text-decoration: none; color: inherit; transition: 0.3s; }
-ul { list-style: none; }
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
 
-/* Navigation */
+ul {
+    list-style: none;
+}
+
+/* NAVBAR */
 nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(2, 6, 23, 0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    position: fixed;
-    width: 100%;
-    background-color: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(5px);
+    padding: 18px 10%;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); }
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--accent);
+}
 
-.nav-links { display: flex; gap: 30px; }
-.nav-links a:hover { color: var(--accent); }
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
 
-/* Sections */
-section { padding: 80px 10%; }
-.section-title { font-size: 2rem; margin-bottom: 40px; text-align: center; color: var(--accent); }
+.nav-links a:hover {
+    color: var(--accent);
+}
 
-/* Hero Section with One Piece Background */
+/* SECTIONS */
+section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--accent);
+}
+
+/* HERO */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    
-    /* BACKGROUND IMAGE SETTINGS */
-    /* This link is the Going Merry sailing GIF with a dark overlay */
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://i.pinimg.com/originals/2c/36/27/2c3627705b4b1f48d94326164d14e365.gif');
-    
-    /* This makes it cover the whole screen */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Creates a cool 3D scrolling effect */
+    background: linear-gradient(135deg, #020617, #0f172a);
 }
 
-.hero h1 { font-size: 4rem; margin: 10px 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-.hero p { font-size: 1.5rem; color: var(--text-primary); margin-bottom: 30px; text-shadow: 1px 1px 5px rgba(0,0,0,0.8); }
+.hero h1 {
+    font-size: 3.8rem;
+    margin: 10px 0;
+}
 
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin-bottom: 35px;
+}
+
+/* BUTTONS */
 .btn {
     padding: 12px 30px;
     border-radius: 5px;
-    font-weight: bold;
-    margin: 0 10px;
+    font-weight: 600;
+    margin: 0 8px;
 }
-.primary { background-color: var(--accent); color: var(--bg-color); }
-.primary:hover { background-color: var(--hover); }
-.secondary { border: 2px solid var(--accent); color: var(--accent); }
-.secondary:hover { background-color: rgba(56, 189, 248, 0.1); }
 
-/* About & Skills */
+.primary {
+    background-color: var(--accent);
+    color: var(--bg-color);
+}
+
+.primary:hover {
+    background-color: var(--hover);
+}
+
+.secondary {
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.secondary:hover {
+    background-color: rgba(56,189,248,0.1);
+}
+
+/* ABOUT */
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
     justify-content: center;
 }
-.about-text { max-width: 600px; color: var(--text-secondary); }
-.skills h3 { margin-bottom: 15px; }
+
+.about-text {
+    max-width: 600px;
+    color: var(--text-secondary);
+}
+
+.skills h3 {
+    margin-bottom: 15px;
+}
+
 .skill-tags span {
     display: inline-block;
     background: var(--card-bg);
     padding: 8px 15px;
-    margin: 5px;
+    margin: 6px;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Projects Grid - FIXED ALIGNMENT HERE */
+/* PROJECTS */
 .project-grid {
     display: grid;
-    /* Changed 'auto-fit' to 'auto-fill' to stop the last card from stretching */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
 }
 
 .project-card {
-    background-color: var(--card-bg);
-    border-radius: 10px;
+    background: var(--card-bg);
     padding: 25px;
-    transition: transform 0.3s ease;
+    border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.3s ease, border 0.3s ease;
 }
 
-.project-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-.project-card h3 { margin-bottom: 10px; }
-.description { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 15px; }
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
 
 .tech-used span {
     font-size: 0.8rem;
@@ -124,18 +185,40 @@ section { padding: 80px 10%; }
     margin-right: 10px;
 }
 
-.card-links { margin-top: 20px; }
-.card-links a { margin-right: 15px; font-size: 0.9rem; }
-.card-links a:hover { color: var(--accent); }
+.card-links {
+    margin-top: 20px;
+}
 
-/* Contact Footer */
-.footer { text-align: center; padding-bottom: 40px; }
-.social-links { margin: 30px 0; font-size: 1.2rem; }
-.social-links a { margin: 0 15px; }
-.copyright { color: var(--text-secondary); font-size: 0.9rem; }
+.card-links a:hover {
+    color: var(--accent);
+}
 
-/* Mobile Responsiveness */
+/* FOOTER */
+.footer {
+    text-align: center;
+}
+
+.social-links {
+    margin: 30px 0;
+    font-size: 1.3rem;
+}
+
+.social-links a {
+    margin: 0 15px;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Simplified for mobile */
-    .hero h1 { font-size: 2.5rem; }
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
 }
