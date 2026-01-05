@@ -4,148 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khem Raj Joshi | Portfolio</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-    <nav>
-        <div class="logo">Portfolio.</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">Khem.</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <section id="home" class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://i.pinimg.com/originals/2c/36/27/2c3627705b4b1f48d94326164d14e365.gif'); background-size: cover; background-position: center; background-attachment: fixed;">
-        <div class="hero-content">
-            <span class="greeting">Hi, I am</span>
-            <h1>Khem Raj Joshi</h1>
-            <p>AI & Data Science Student | Python Developer</p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
+<main>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <span class="greeting">Hello, I'm</span>
+        <h1>Khem Raj Joshi</h1>
+        <p class="subtitle">AI & Data Science Student | Python Developer</p>
+
+        <div class="hero-btns">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-content">
+        <div class="about-text">
+            <p>
+                I am an <strong>AI & Data Science undergraduate</strong> with a passion for
+                building intelligent systems using Python, Machine Learning,
+                and Computer Vision.
+            </p>
+            <p>
+                I enjoy working on real-world applications involving automation,
+                analytics, and deep learning while continuously improving my
+                software engineering skills.
+            </p>
+        </div>
+
+        <div class="skills">
+            <h3>Technical Skills</h3>
+            <div class="skill-tags">
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Computer Vision</span>
+                <span>SQL</span>
+                <span>Git & GitHub</span>
+                <span>Data Structures</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="about" class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>
-                    I am a passionate computer science student with a strong focus on <strong>Artificial Intelligence</strong> and <strong>Data Science</strong>. 
-                    I love using Python and building intelligent systems that make a difference.
-                </p>
-                <p>
-                    When I'm not coding, I am exploring new tech, working on data mining projects, or learning about cloud computing architecture.
-                </p>
+<!-- PROJECTS -->
+<section id="projects" class="container">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>Smart Attendance System</h3>
+            <p class="description">
+                Face recognition–based attendance system that detects and logs
+                student presence in real time using a webcam.
+            </p>
+            <div class="tech-used">
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>Pandas</span>
             </div>
-            <div class="skills">
-                <h3>Tech Stack</h3>
-                <div class="skill-tags">
-                    <span>Python</span>
-                    <span>Machine Learning</span>
-                    <span>Computer Vision</span>
-                    <span>SQL</span>
-                    <span>Git/GitHub</span>
-                    <span>Data Structures</span>
-                </div>
+            <div class="card-links">
+                <a href="https://github.com/khem75/Attendence--system" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
             </div>
         </div>
-    </section>
 
-    <section id="projects" class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        
-        <div class="project-grid">
-            
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>Smart Attendance System</h3>
-                    <p class="description">
-                        An automated attendance tracking system using Face Detection. It recognizes faces in real-time via webcam and logs entry times directly into an Excel/CSV file.
-                    </p>
-                    <div class="tech-used">
-                        <span>Python</span>
-                        <span>OpenCV</span>
-                        <span>Face_Recognition</span>
-                        <span>Pandas</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/khem75/Attendence--system" target="_blank"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
+        <div class="project-card">
+            <h3>AI Chess Engine</h3>
+            <p class="description">
+                Intelligent chess engine implementing Minimax with Alpha-Beta Pruning
+                for strategic gameplay.
+            </p>
+            <div class="tech-used">
+                <span>Python</span>
+                <span>Algorithms</span>
+                <span>Pygame</span>
             </div>
-
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>AI Chess Engine</h3>
-                    <p class="description">
-                        A strategic chess game agent capable of playing against humans. Implements the Minimax algorithm with Alpha-Beta pruning to predict and counter opponent moves.
-                    </p>
-                    <div class="tech-used">
-                        <span>Python</span>
-                        <span>Algorithms</span>
-                        <span>Minimax</span>
-                        <span>Pygame</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/khem75/GAME-ai" target="_blank"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
+            <div class="card-links">
+                <a href="https://github.com/khem75/GAME-ai" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
             </div>
-
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>Person Re-identification</h3>
-                    <p class="description">
-                        A Deep Learning computer vision system designed to identify and track specific individuals across non-overlapping camera views, robust to pose and lighting changes.
-                    </p>
-                    <div class="tech-used">
-                        <span>Python</span>
-                        <span>PyTorch/TensorFlow</span>
-                        <span>Deep Learning</span>
-                        <span>CNN</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/khem75/person-re-identification-using-deep-learning" target="_blank"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>AI Job Portal & Resume Screener</h3>
-                    <p class="description">
-                        An intelligent recruitment platform that automates candidate screening. Uses Natural Language Processing (NLP) to parse resumes, match skills to job descriptions, and rank candidates based on relevance.
-                    </p>
-                    <div class="tech-used">
-                        <span>Python</span>
-                        <span>NLP</span>
-                        <span>Scikit-Learn</span>
-                        <span>Flask/Django</span>
-                    </div>
-                    <div class="card-links">
-                        <a href="https://github.com/khem75/ai-based-job-portal-and-resume-screening" target="_blank"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-
-        </div> </section>
-
-    <section id="contact" class="container footer">
-        <h2 class="section-title">Get In Touch</h2>
-        <p>Currently open for internships and collaborations.</p>
-        <div class="social-links">
-            <a href="mailto:khemj421@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-            <a href="https://www.linkedin.com/in/khem-joshi-245865293/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/khem75" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </div>
-        <p class="copyright">&copy; 2026 Khem Raj Joshi. Built with code.</p>
-    </section>
+
+        <div class="project-card">
+            <h3>Person Re-Identification</h3>
+            <p class="description">
+                Deep learning–based system to identify individuals across
+                non-overlapping camera views under varying conditions.
+            </p>
+            <div class="tech-used">
+                <span>Python</span>
+                <span>PyTorch</span>
+                <span>Deep Learning</span>
+            </div>
+            <div class="card-links">
+                <a href="https://github.com/khem75/person-re-identification-using-deep-learning" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>AI Job Portal & Resume Screener</h3>
+            <p class="description">
+                NLP-based recruitment system that parses resumes,
+                matches skills, and ranks candidates automatically.
+            </p>
+            <div class="tech-used">
+                <span>Python</span>
+                <span>NLP</span>
+                <span>Scikit-Learn</span>
+                <span>Django</span>
+            </div>
+            <div class="card-links">
+                <a href="https://github.com/khem75/ai-based-job-portal-and-resume-screening" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container footer">
+    <h2 class="section-title">Contact</h2>
+    <p>Open to internships, research roles, and collaborations.</p>
+
+    <div class="social-links">
+        <a href="mailto:khemj421@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/khem-joshi-245865293/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/khem75" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+
+    <p class="copyright">
+        © 2026 Khem Raj Joshi
+    </p>
+</section>
+
+</main>
 
 </body>
 </html>
