@@ -47,17 +47,26 @@ nav {
 section { padding: 80px 10%; }
 .section-title { font-size: 2rem; margin-bottom: 40px; text-align: center; color: var(--accent); }
 
-/* Hero Section */
+/* Hero Section with One Piece Background */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    
+    /* BACKGROUND IMAGE SETTINGS */
+    /* This link is the Going Merry sailing GIF with a dark overlay */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://i.pinimg.com/originals/2c/36/27/2c3627705b4b1f48d94326164d14e365.gif');
+    
+    /* This makes it cover the whole screen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates a cool 3D scrolling effect */
 }
 
-.hero h1 { font-size: 4rem; margin: 10px 0; }
-.hero p { font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 30px; }
+.hero h1 { font-size: 4rem; margin: 10px 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+.hero p { font-size: 1.5rem; color: var(--text-primary); margin-bottom: 30px; text-shadow: 1px 1px 5px rgba(0,0,0,0.8); }
 
 .btn {
     padding: 12px 30px;
